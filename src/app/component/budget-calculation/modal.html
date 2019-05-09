@@ -1,0 +1,15 @@
+<mat-dialog-content class="assumptions-modal">
+  <div class="budget-calculation-holder relative assumption-controller">
+    <h3><strong>Assumptions</strong> for square footage of flooring</h3>
+    <button mat-dialog-close class="back-to-page" matTooltip="Back to Budget" matTooltipPosition="right"><i class="fa fa-times"></i></button>
+    <ul class="assumption-holder">
+      <li><span>Actual square footage of flooring needed</span><span>{{floor}}</span></li>
+      <li><span>10% added for waste</span><span>{{wasted}}</span></li>
+      <!-- <li><span>Minimum case pack</span><span>19.68</span></li>
+      <li><span>Case packs needed</span><span>11.00419207</span></li>
+      <li><span>Rounded to full casepack</span><span>11</span></li> -->
+    
+    <li><span>Actual square footage to be purchased</span><span>{{actual}}</span></li>
+    </ul>
+  </div>
+</mat-dialog-content>

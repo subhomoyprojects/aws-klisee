@@ -1,0 +1,80 @@
+<app-header></app-header>
+<main class="body-wrapper">
+  <section class="main-heading-wrapper">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 heading-tag collect-pin">
+            <!-- Let's get started creating your -->
+            <h1> <strong>Cabinets Remodel Budget!</strong><span>Please help Klisee with the following details in order to create the most accurate budget</span></h1>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="budget-calculation-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="budget-calculation-holder">
+            <h2 class="text-center">If you want an Island or Peninsula, please enter the rough Length of width of the COUNTERTOP </h2>
+            <div class="row">
+              <div class="col-12 plan-holder">
+                <img src="assets/images/pininsula-plan.png" class="mt-2" alt="Countertop Pininsula Plan">
+                <form id="cabinetsPeninsulaMeasure" [formGroup]="cabinetsPeninsulaMeasure">
+                  <div class="plan-size-input-holder">
+                    <div class="full-width">
+                      <div class="half-width">
+                        <mat-form-field>
+                          <input matInput formControlName="peninsulaMeasure1" placeholder="Length">
+                          <span matSuffix>Inches</span>
+                        </mat-form-field>
+                      </div>
+                      <div class="half-width">
+                        <mat-form-field>
+                          <input matInput formControlName="peninsulaMeasure2" placeholder="Width">
+                          <span matSuffix>Inches</span>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="full-width">
+                      <div class="half-width">
+                        <mat-form-field>
+                          <input matInput formControlName="peninsulaMeasure3" placeholder="Length">
+                          <span matSuffix>Inches</span>
+                        </mat-form-field>
+                      </div>
+                      <div class="half-width">
+                        <mat-form-field>
+                          <input matInput formControlName="peninsulaMeasure4" placeholder="Width">
+                          <span matSuffix>Inches</span>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="full-width">
+                      <div class="half-width">
+                        <mat-form-field>
+                          <input matInput formControlName="peninsulaMeasure5" placeholder="Length">
+                          <span matSuffix>Inches</span>
+                        </mat-form-field>
+                      </div>
+                      <div class="half-width">
+                        <mat-form-field>
+                          <input matInput formControlName="peninsulaMeasure6" placeholder="Width">
+                          <span matSuffix>Inches</span>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- <div class="text-right"><button class="add-another-room" type="button">+ Add Another Length</button></div> -->
+              </div>
+            </div>
+            <div class="nxt-prev-btn-holder mt-4 mb-4">
+              <a routerLink="/cabinets-floor-plan" mat-button class="prev-btn">Previous</a>
+              <a routerLink="#" mat-button class="next-btn">Next</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

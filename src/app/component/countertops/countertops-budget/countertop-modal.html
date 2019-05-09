@@ -1,0 +1,12 @@
+<mat-dialog-content class="assumptions-modal">
+  <div class="budget-calculation-holder relative assumption-controller">
+    <h3><strong>Assumptions</strong> for square footage of flooring</h3>
+    <button mat-dialog-close class="back-to-page" matTooltip="Back to Budget" matTooltipPosition="right"><i class="fa fa-times"></i></button>
+    <ul class="assumption-holder">
+      <li><span>Square feet of counters <small>(a+b+c+d+...) * 26 (width of counters) / 144</small></span><span>{{counter}}</span></li>
+      <li><span>Square feet of island <small>(length 1 * width 1 + length 2 * width 2 + length 3 * width 3) / 144</small></span><span>{{island}}</span></li>
+      <li><span>Square feet of backsplash <small>(linear inches / 36 * cost Pr/Sf)</small></span><span>{{backsplash}}</span></li>
+      <li><span>Total Square footage <small>(Square feet of counters + Square feet of backsplash)</small></span><span>{{footage}}</span></li>
+    </ul>
+  </div>
+</mat-dialog-content>

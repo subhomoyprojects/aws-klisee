@@ -1,0 +1,21 @@
+<mat-dialog-content class="assumptions-modal">
+  <div class="budget-calculation-holder relative assumption-controller edit-name-controller">
+    <h3><strong>Please give a name to your project</strong></h3>
+    <button mat-dialog-close class="back-to-page" matTooltip="Back to Budget" matTooltipPosition="right"><i class="fa fa-times"></i></button>
+    <div class="mt-4 edit-name-modal-holder">
+      <!-- <mat-form-field>
+        <input matInput placeholder="E.g Flooring for leaving room">
+      </mat-form-field> -->
+      <mat-form-field appearance="outline">
+        <mat-label>E.g Flooring for leaving room</mat-label>
+        <form id="editName" [formGroup]= "editName">
+          <input matInput  placeholder="Project Name" formControlName ="name">
+        </form>
+      </mat-form-field>
+    </div>
+    <div class="nxt-prev-btn-holder mt-2">
+      <button routerLink="/signup" mat-dialog-close (click)="loginCheck(1)" mat-button class="next-btn" *ngIf="!signUpValue">Save Project</button>
+      <button  mat-dialog-close mat-button class="next-btn" (click)="projectNameSave()" *ngIf="signUpValue">Save Project</button>
+    </div>
+  </div>
+</mat-dialog-content>

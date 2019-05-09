@@ -1,0 +1,122 @@
+<app-header></app-header>
+<main class="body-wrapper">
+  <section class="main-heading-wrapper">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 heading-tag collect-pin">
+            <h1><strong>Countertops Remodel Budget!</strong><span>Please help Klisee with the following details in order to create the most accurate budget</span></h1>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="common-controller-question-answer yourroom-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="room-details-holder heading-tag">
+            <h2>Please tell us some details about countertop remodel</h2>
+            <form id="counterTopDetails" [formGroup]="counterTopDetails">
+              <ul class="room-details countertop-details">
+                <li class="active-room-details">
+                  <div class="room-holder">
+                    <div class="full-width">
+                      <div class="quarter-controller quarter-third-width">
+                        <label>Will you need your old counters removed?</label>
+                      </div>
+                      <div class="quarter-controller quarter-width">
+                        <mat-radio-group formControlName="oldCounterRemoved">
+                          <mat-radio-button value="yes" required >Yes</mat-radio-button>
+                          <mat-radio-button value="no" required >No</mat-radio-button>
+                        </mat-radio-group>
+                      </div>
+                    </div>
+                    <div class="need-sinks-holder">
+                      <div class="full-width">
+                        <div class="quarter-controller quarter-third-width">
+                          <label>Will you need sinks?</label>
+                        </div>
+                        <div class="quarter-controller quarter-width">
+                          <mat-radio-group formControlName="needSinks">
+                            <mat-radio-button value="yes" (change)="isActive = !isActive" required >Yes</mat-radio-button>
+                            <mat-radio-button value="no"  (change)="isActive = false" required >No</mat-radio-button>
+                          </mat-radio-group>
+                        </div>
+                      </div>
+                      <div class="need-sinks-child-holder" [ngClass]="{'active': isActive}">
+                        <div class="full-width">
+                          <mat-form-field>
+                            <input matInput placeholder="How many sinks will you need?" class="countertop_details" formControlName="howManySink">
+                            <mat-error *ngIf = "this.counterTopDetails.controls.howManySink.status!=='VALID' && show">Only Numeric Valid is Allowed</mat-error>
+                          </mat-form-field>
+                        </div>
+                        <div class="full-width">
+                          <div class="half-width">
+                            <mat-form-field>
+                              <input matInput placeholder="Enter a budget" class="countertop_details" formControlName="sinkBudget" value="{{budget}}">
+                              <span matPrefix>$&nbsp;</span>
+                              <mat-error *ngIf = "this.counterTopDetails.controls.sinkBudget.status!=='VALID' && show">Only Numeric Valid is Allowed</mat-error>
+                            </mat-form-field>
+                          </div>
+                          <div class="half-width">
+                            <mat-form-field>
+                              <input matInput placeholder="Model Number / SKU" class="countertop_details" formControlName="sku">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="full-width">
+                          <mat-form-field>
+                            <textarea matInput formControlName="description" placeholder="Description"></textarea>
+                          </mat-form-field>
+                        </div>
+                        <span class="sink-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="full-width">
+                      <div class="quarter-controller quarter-third-width">
+                        <label>Will you need a plumber?</label>
+                      </div>
+                      <div class="quarter-controller quarter-width">
+                        <mat-radio-group formControlName="needPlumber">
+                          <mat-radio-button value="yes" required >Yes</mat-radio-button>
+                          <mat-radio-button value="no" required >No</mat-radio-button>
+                        </mat-radio-group>
+                      </div>
+                    </div>
+                    <div class="full-width">
+                      <div class="quarter-controller quarter-third-width">
+                        <label> Do you want to add a 4" tall back splash?</label>
+                      </div>
+                      <div class="quarter-controller quarter-width">
+                        <mat-radio-group formControlName="addSpalsh">
+                          <mat-radio-button value="yes" required>Yes</mat-radio-button>
+                          <mat-radio-button value="no" required>No</mat-radio-button>
+                        </mat-radio-group>
+                      </div>
+                    </div>
+                    <div class="full-width">
+                      <div class="quarter-controller quarter-third-width">
+                        <label>Will you need an Island or Peninsula?</label>
+                      </div>
+                      <div class="quarter-controller quarter-width">
+                        <mat-radio-group formControlName="needIslandPeninsula">
+                          <mat-radio-button value="yes" required (click)="decision(1)" >Yes</mat-radio-button>
+                          <mat-radio-button value="no" required (click)="decision(0)">No</mat-radio-button>
+                        </mat-radio-group>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="nxt-prev-btn-holder">
+                  <mat-error class="mb-0" style="color:#db6564;" *ngIf = "!counterTopDetails.valid">Enter Inputs!</mat-error>
+                <a routerLink="/countertop-location" mat-button class="prev-btn">Previous</a>
+                <a routerLink="/countertop-details" mat-button class="next-btn" (click)="counterSubmit()" *ngIf="!counterTopDetails.valid">Next</a>
+                <a routerLink="/countertop-floor-plan" mat-button class="next-btn" (click)="counterSubmit()" *ngIf="counterTopDetails.valid">Next</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

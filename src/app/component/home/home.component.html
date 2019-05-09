@@ -1,0 +1,59 @@
+<main class="home-wrapper">
+  <section class="navigation-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light navigation-holder">
+      <a class="navbar-brand" routerLink="/home"><img src="/assets/images/logo.png" alt="KLISEE"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse empowering-home-text-controller" id="navbarSupportedContent">
+        <p class="visible-desktop">empowering the homeowner</p>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item separater">
+            <a class="nav-link" routerLink="/login"  *ngIf="!isloggedIn">Log In</a>
+            <a class="nav-link" routerLink="/login" *ngIf="isloggedIn" (click)="LogOut()">Log Out</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup" *ngIf="!isloggedIn">Sign Up</a>
+            <a class="nav-link" routerLink="/my-account" *ngIf="isloggedIn">My Account</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 empowering-home-text-controller visible-mobile text-center">
+          <p>empowering the homeowner</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="budget-picker-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 budget-picker-controller">
+          <h1>Ready to create a budget? Pick your project</h1>
+          <form class="example-form">
+            <mat-form-field class="project-picker">
+              <input type="text" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]= val(option) (click)=fun_id(model_id(option)) >
+                  {{ val(option) }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </form>   
+          <!-- val = {{options[2]}} -->
+          <!-- {{filteredOptions}} -->
+            <!-- <li *ngIf = "options.value === options[2]">
+              <<h2>HI</h2> -->
+              <a routerLink="{{routerLink()}}" class="get-started-btn">get started</a>    
+            <!-- </li> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

@@ -1,0 +1,87 @@
+<app-header></app-header>
+<main class="body-wrapper">
+  <section class="main-heading-wrapper">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 heading-tag collect-pin">
+            <!-- Let's get started creating your -->
+            <h1> <strong>Countertops Remodel Budget!</strong><span>Please help Klisee with the following details in order to create the most accurate budget:</span></h1>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="budget-calculation-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="budget-calculation-holder">
+            <h2 class="text-center">Make rectangles by measuring each length of Countertop</h2>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-7 plan-holder">
+                <img src="assets/images/plan.png" class="mt-2" alt="Countertop Measuring Plan">
+              </div>
+              <div class="col-12 col-sm-6 col-md-5 plan-details-holder">
+                <form id="floorPlan" [formGroup]="floorPlan">
+                      <mat-form-field>
+                          <input matInput placeholder="length"  formControlName="length1">
+                          <mat-error *ngIf = "this.floorPlan.controls.length1.status!=='VALID' && show">Enter a valid Input</mat-error>
+                          <span matPrefix>(a)&nbsp;</span>
+                          <span matSuffix>Inches</span>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="length"  formControlName="length2">
+                            <mat-error *ngIf = "this.floorPlan.controls.length2.status!=='VALID' && show">Enter a valid Input</mat-error>
+                            <span matPrefix>(b)&nbsp;</span>
+                            <span matSuffix>Inches</span>
+                          </mat-form-field>
+                          <mat-form-field>
+                            <input matInput placeholder="length"  formControlName="length3">
+                            <mat-error *ngIf = "this.floorPlan.controls.length3.status!=='VALID' && show">Enter a valid Input</mat-error>
+                            <span matPrefix>(c)&nbsp;</span>
+                            <span matSuffix>Inches</span>
+                          </mat-form-field>
+                          <mat-form-field>
+                            <input matInput placeholder="length"  formControlName="length4">
+                            <mat-error *ngIf = "this.floorPlan.controls.length4.status!=='VALID' && show">Enter a valid Input</mat-error>
+                            <span matPrefix>(d)&nbsp;</span>
+                            <span matSuffix>Inches</span>
+                          </mat-form-field>
+                          <mat-form-field>
+                            <input matInput placeholder="length"  formControlName="length5">
+                            <mat-error *ngIf = "this.floorPlan.controls.length5.status!=='VALID' && show">Numeric Value Only</mat-error>
+                            <span matPrefix>(e)&nbsp;</span>
+                            <span matSuffix>Inches</span>
+                          </mat-form-field>
+                  <div formArrayName="floorPlanRooms">      
+                    <ul>
+                      <li *ngFor="let counter of counterForms.controls; let i=index" [formGroupName]="i">
+                    <div class="plan-size-input-holder">
+                        <mat-form-field>
+                            <input matInput placeholder="length"  formControlName="length">
+                            <span matPrefix>({{i+6}})&nbsp;</span>
+                            <span matSuffix>Inches</span>
+                          </mat-form-field>
+                      </div>
+                    </li>
+                  </ul>
+                    </div>
+                </form>
+                <div class="text-right"><button class="add-another-room" type="button" (click)="addLength()" hidden>+ Add Another Length</button></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 text-center">
+                <mat-error class="mb-0" style="color:#db6564;" *ngIf = "checkValue">Atleast one field is required!</mat-error>
+              </div>
+            </div>
+            <div class="nxt-prev-btn-holder mt-4 mb-4">
+              <a routerLink="/countertop-details" mat-button class="prev-btn">Previous</a>
+              <button type="button" mat-button class="next-btn" (click)="floorPlanSubmit()">Next</button>
+              <!-- <button type="button" mat-button class="next-btn" (click)="floorPlanSubmit()" *ngIf="!decisionBudget">Next</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

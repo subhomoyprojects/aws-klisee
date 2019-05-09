@@ -1,0 +1,91 @@
+<app-header></app-header>
+<main class="body-wrapper">
+  <section class="main-heading-wrapper">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 heading-tag collect-pin">
+            <!-- Let's get started creating your -->
+            <h1> <strong>Countertops Remodel Budget!</strong><span>Please help Klisee with the following details in order to create the most accurate budget:</span></h1>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="budget-calculation-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="budget-calculation-holder">
+            <h2 class="text-center">For an Island or Peninsula, measure the length and width</h2>
+            <div class="row">
+              <div class="col-12 plan-holder">
+                <img src="assets/images/pininsula-plan.png" class="mt-2" alt="Countertop Pininsula Plan">
+                <div class="plan-size-input-holder">
+                  <form id="peninsula" [formGroup]="peninsulaForm">
+                      <div class="full-width">
+                        <div class="half-width">
+                          <mat-form-field>
+                            <input matInput placeholder="Length" formControlName="Length">
+                            <mat-error *ngIf = "this.peninsulaForm.controls.Length.status!=='VALID' && show">Numeric Value Only</mat-error>
+                            <span matSuffix>Inches</span>
+                          </mat-form-field>
+                        </div>
+                        <div class="half-width">
+                          <mat-form-field>
+                            <input matInput placeholder="Width" formControlName="Width">
+                            <mat-error *ngIf = "this.peninsulaForm.controls.Width.status!=='VALID' && show">Numeric Value Only</mat-error>
+                            <span matSuffix>Inches</span>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="full-width">
+                        <div class="half-width">
+                          <mat-form-field>
+                            <input matInput placeholder="Length" formControlName="Length1">
+                            <mat-error *ngIf = "this.peninsulaForm.controls.Length1.status!=='VALID' && show">Numeric Value Only</mat-error>
+                            <span matSuffix>Inches</span>
+                          </mat-form-field>
+                        </div>
+                        <div class="half-width">
+                          <mat-form-field>
+                            <input matInput placeholder="Width" formControlName="Width1">
+                            <mat-error *ngIf = "this.peninsulaForm.controls.Width1.status!=='VALID' && show">Numeric Value Only</mat-error>
+                            <span matSuffix>Inches</span>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="full-width">
+                        <div class="half-width">
+                          <mat-form-field>
+                            <input matInput placeholder="Length" formControlName="Length2">
+                            <mat-error *ngIf = "this.peninsulaForm.controls.Length2.status!=='VALID' && show">Numeric Value Only</mat-error>
+                            <span matSuffix>Inches</span>
+                          </mat-form-field>
+                        </div>
+                        <div class="half-width">
+                          <mat-form-field>
+                            <input matInput placeholder="Width" formControlName="Width2">
+                            <mat-error *ngIf = "this.peninsulaForm.controls.Width2.status!=='VALID' && show">Numeric Value Only</mat-error>
+                            <span matSuffix>Inches</span>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                  </form>
+                </div>
+                <!-- <div class="text-right"><button class="add-another-room" type="button">+ Add Another Length</button></div> -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 text-center">
+                <p class="mb-0" style="color:#db6564;" *ngIf = "!checkValue">First two fields are required!</p>
+              </div>
+            </div>
+            <div class="nxt-prev-btn-holder mt-4 mb-4">
+              <a routerLink="/countertop-floor-plan" mat-button class="prev-btn">Previous</a>
+              <button routerLink="/countertop-budget" mat-button class="next-btn" (click)="peninsulaSubmit()">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

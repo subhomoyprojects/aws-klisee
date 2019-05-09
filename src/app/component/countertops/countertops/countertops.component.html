@@ -1,0 +1,44 @@
+<app-header></app-header>
+<main class="body-wrapper">
+  <section class="main-heading-wrapper">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 heading-tag collect-pin">
+            <!-- Let's get started creating your -->
+            <h1> <strong>Countertops Remodel Budget!</strong><span>Please help Klisee with the following details in order to create the most accurate budget:</span></h1>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="common-controller-question-answer state-pin-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <figure class="question-answer-holder">
+            <div class="question-answer-title-holder">
+              <h2>Please select the type of countertops you would like </h2>
+              <div class="question-answer-icon-holder">
+                <img src="assets/images/engineer.png" alt="Worker">
+              </div>
+            </div>
+            <figcaption>
+              <form class="question-answer-form">
+                <mat-radio-group>
+                  <ul>
+                    <li *ngFor="let data of bothData, let i=index">
+                      <mat-radio-button *ngIf="checkIsCheck(data)==='true'" checked value={{name(data)}} (click)=func_id(name(data),counter_id(data)) >{{name(data)}} </mat-radio-button>
+                      <mat-radio-button *ngIf="checkIsCheck(data)==='false'" value={{name(data)}} (click)=func_id(name(data),counter_id(data)) >{{name(data)}} </mat-radio-button>
+                    </li>
+                  </ul>
+                </mat-radio-group>
+                <div class="nxt-prev-btn-holder">
+                  <button type="button" routerLink="/countertop-location" mat-button class="next-btn">Next</button>
+                </div>
+              </form>              
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

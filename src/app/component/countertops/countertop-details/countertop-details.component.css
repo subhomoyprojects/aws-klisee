@@ -1,0 +1,310 @@
+.body-wrapper{
+    background: linear-gradient(0deg,rgba(228,228,232,0.5),rgba(228,228,232,0.5)), url(/assets/images/bg.jpg) no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 70px);
+    background-attachment: fixed;
+}
+.heading-tag h1{
+    color: #446277;
+    font-size: 36px;
+    text-align: center;
+    font-family: Helvetica;
+    line-height: 40px;
+    margin: 2rem 0 1.5rem;
+}
+.heading-tag h1 span{
+    display: block;
+    font-size: 18px;
+}
+/* Media Query */
+
+@media (min-width:320px) and (max-width:767px){
+    .heading-tag h1 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .heading-tag h1 span {
+        font-size: 13px;
+        line-height: 15px;
+        margin-top: 10px;
+    }
+}
+
+/* Media Query */
+.nxt-prev-btn-holder{
+    display: flex;
+    justify-content: center;
+}
+.nxt-prev-btn-holder .next-btn,
+.nxt-prev-btn-holder .prev-btn{
+    display: inline-block;
+    padding: 1px 16px;
+    color: #18374c;
+    transition: all ease-in-out 0.3s;
+    font-family: 'Helvetica';
+    font-size: 17px;
+    min-width:100px;
+    margin: 0 20px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    border: 1px solid;
+}
+.next-btn:hover,.next-btn:active,.next-btn:focus,
+.prev-btn:hover,.prev-btn:active,.prev-btn:focus{
+    text-decoration: none;
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+}
+.next-btn{
+    background: linear-gradient(90deg,#e6ad17,#f0d590,#e7b11b);
+    border-color: #d5ac3d !important;
+}
+.prev-btn{
+    background: linear-gradient(90deg,#c8c8c8,#e0e3e3,#c6c6c6);
+    border-color: #cfcfcf !important;
+}
+.room-details-holder{
+    background-color: rgba(24,55,76,85%);
+    padding: 30px;
+    width: 98%;
+    max-width: 780px;
+    margin: 0 auto 20px;
+    min-height: 400px;
+    border-radius: 4px;
+}
+.heading-tag h2{
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+}
+.room-holder{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #94b2c6;
+    /* min-height: 300px; */
+    margin-top: 40px;
+    padding:15px;
+    transition: all ease-in-out 0.3s;
+}
+.room-holder h3{
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 10px;
+    display: table;
+    position: absolute;
+    margin-left: 20px;
+    background-color: #375264;
+    top: -10px;
+}
+.full-width{
+    width:100%;
+    display: flex;
+}
+.half-width{
+    width:50%;
+    margin-right: 15px;
+}
+.half-width:last-child{
+    margin-right: 0;
+}
+.quarter-controller:first-child{
+    margin-right: 15px;
+}
+.quarter-third-width{
+    width:70%;
+}
+.quarter-width{
+    width:30%;
+}
+.quarter-controller label{
+    color: #fff;
+}
+.quarter-controller .mat-radio-button{
+    color: #fff;
+    width:48%;
+    text-align: right;
+}
+.quarter-controller .mat-radio-button:first-child{
+    margin-right: 5px;
+}
+.room-holder > div{
+    margin-bottom: 20px;
+}
+.add-another-room{
+    color: #fff;
+    text-decoration: underline;
+    border: none;
+    font-size: 12px;
+    padding: 0;
+}
+.edit-delete-room-holder{
+    text-align: right;
+    position: absolute;
+    right: 20px;
+    background-color: #375264;
+    top: -16px;
+}
+.edit-delete-room-holder button{
+    margin-right: 10px;
+    color: #fff;
+    font-size: 16px;
+    width:30px;
+    height: 30px;
+    border:1px solid #fff;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+}
+.edit-delete-room-holder button:last-child{
+    margin-right: 0;
+}
+.edit-delete-room-holder button:hover{
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+/* .active-room-details .edit-delete-room-holder .edit-room{
+    display: none;
+} */
+.active-room-details.stor-room-details .edit-delete-room-holder .edit-room{
+    display: inline-block;
+}
+.room-details .stor-room-details:not(.active-room-details) .room-holder{
+    height: 40px;
+    min-height: auto;
+    overflow-y: hidden;
+}
+.room-details .stor-room-details:not(.active-room-details) .room-holder h3{
+    top: 10px;
+    margin-left: 0;
+}
+.room-details .stor-room-details:not(:last-child):not(.active-room-details) .room-holder .edit-delete-room-holder{
+    top: 6px;
+}
+.room-details .stor-room-details .room-holder .edit-delete-room-holder{
+    top: 6px;
+}
+.room-details .stor-room-details .room-holder .full-width{
+    pointer-events: none;
+    display: none;
+}
+.room-details .stor-room-details.active-room-details .room-holder .full-width{
+    pointer-events: all;
+    display: inherit;
+}
+.room-details .active-room-details.stor-room-details .room-holder .edit-delete-room-holder{
+    top: -16px;
+}
+.room-details .stor-room-details:not(.active-room-details) .room-holder .edit-delete-room-holder button{
+    font-size: 13px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0;
+}
+.room-details .stor-room-details:not(:last-child):not(.active-room-details) .room-holder .full-width{
+    display: none;
+}
+/*-------*/
+
+.need-sinks-holder .full-width{
+    margin-bottom: 0;
+}
+.need-sinks-child-holder{
+    padding: 0;
+    background-color: rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    margin-top: 0;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    transition: all 0.5s cubic-bezier(0, 1, 0.5, 1);
+    transform: scaleY(0);
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transform-origin: 0% 0%;
+}
+.sink-arrow{
+    position: absolute;
+    top: -15px;
+    width: 30px;
+    height: 15px;
+    overflow: hidden;
+    z-index: 9;
+}
+.sink-arrow::before{
+    position: absolute;
+    content: "";
+    background-color: #30495a;
+    border: 1px solid rgba(255,255,255,0.2);
+    top: 7px;
+    width:30px;
+    height: 30px;
+    transform: rotate(45deg);
+}
+.need-sinks-child-holder.active{
+    transform: scaleY(1);
+    visibility: visible;
+    height: auto;
+    padding: 15px;
+    margin-top: 20px;
+    opacity: 1;
+}
+
+/* Media Query */
+
+@media (min-width:320px) and (max-width:767px){
+    .room-holder h3 {
+        font-size: 13px;
+        top: -9px;
+    }
+    .room-details .stor-room-details:not(:last-child) .room-holder h3 {
+        top: 12px;
+    }
+}
+@media (min-width:320px) and (max-width:600px)
+{
+    .full-width {
+        flex-direction: column;
+    }
+    .half-width {
+        width: 100%;
+        margin-right: 0;
+    }
+    .room-holder > div {
+        margin-bottom: 15px;
+    }
+    .quarter-controller label {
+        font-size: 12px;
+    }
+    .quarter-width{
+        width: 100%;
+    }
+    .quarter-controller .mat-radio-button {
+        width: auto;
+        text-align: left;
+    }
+    .quarter-controller .mat-radio-button:first-child {
+        margin-right: 15px;
+    }
+    .add-another-room {
+        margin-bottom: 15px;
+    }
+    .heading-tag h2 {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+    }
+    .need-sinks-child-holder.active{
+        padding: 5px;
+    }
+}
+
+/* Media Query */

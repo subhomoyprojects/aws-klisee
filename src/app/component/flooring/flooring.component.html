@@ -1,0 +1,56 @@
+<app-header></app-header>
+<main class="body-wrapper">
+  <section class="main-heading-wrapper">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 heading-tag collect-pin">
+            <h1><strong>Flooring Remodel Budget!</strong><span>Please help Klisee with the following details in order to create the most accurate budget</span></h1>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="common-controller-question-answer state-pin-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <figure class="question-answer-holder">
+            <div class="question-answer-title-holder">
+              <h2>Please select the type of flooring you would like </h2>
+              <div class="question-answer-icon-holder">
+                <img src="assets/images/engineer.png" alt="Worker">
+              </div>
+            </div>
+            <figcaption>
+              <form class="question-answer-form">
+                <mat-radio-group>
+                  <ul>
+                    <li *ngFor="let option of options, let i=index"  >
+                          
+                          <mat-radio-button *ngIf="checkIsCheck(option)==='true'" checked value={{name(option)}} (click)=fun_id(floor_id(option)) >{{name(option)}} </mat-radio-button>
+                          <mat-radio-button *ngIf="checkIsCheck(option)==='false'"  value={{name(option)}} (click)=fun_id(floor_id(option)) >{{name(option)}} </mat-radio-button>
+                      <!-- <div *ngIf ="i==0" >{{func(floor_id(option))}}</div> -->
+                      
+                      <!-- <a>{{floor_id(option)}}</a> -->
+                    </li>
+                    <li><mat-radio-button value="not sure" (click)=fun_id(firstValue) >Not sure</mat-radio-button></li>
+                    <!-- <li><mat-radio-button value="Unfinished Flooring">Unfinished Flooring</mat-radio-button></li>
+                    <li><mat-radio-button value="Sanding and Refinishing existing">Sanding and Refinishing existing </mat-radio-button></li>
+                    <li><mat-radio-button value="Hardwood Flooring">Hardwood Flooring</mat-radio-button></li>
+                    <li><mat-radio-button value="Sheet Vinyl">Sheet Vinyl</mat-radio-button></li>
+                    <li><mat-radio-button value="Luxury Vinyl">Luxury Vinyl</mat-radio-button></li>
+                    <li><mat-radio-button value="Porcelain or Ceramic tile flooring">Porcelain or Ceramic tile flooring</mat-radio-button></li>
+                    <li><mat-radio-button value="Laminate flooring (Lock & Click floating)">Laminate flooring (Lock & Click floating)</mat-radio-button></li> -->
+                  </ul>
+                </mat-radio-group>
+                <div class="nxt-prev-btn-holder">
+                  <button type="button" routerLink="/location" mat-button class="next-btn">Next</button>
+                </div>
+              </form>              
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

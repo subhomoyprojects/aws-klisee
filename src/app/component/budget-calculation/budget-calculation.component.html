@@ -1,0 +1,83 @@
+<app-header></app-header>
+<main class="body-wrapper">
+  <app-service-heading></app-service-heading>
+  <section class="budget-calculation-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="budget-calculation-holder">
+            <h2 class="text-center">Here is your <strong class="text-capitalize">{{title}} Remodel</strong> Budget</h2>
+            <div class="flooring-budget-holder">
+              <h5 class="relative">Materials Budget:<mat-spinner class="loader-controller" [mode]="mode"></mat-spinner></h5>
+              <ul class="budget-part">
+                <li *ngFor= "let b of budgetMatArr">
+                  <div><button (click)="openDialog()" matTooltip="Know Your Assumptions" matTooltipPosition="right">{{b.field_name}}</button></div>
+                  <div>{{b.value}}</div>
+                  <div>{{b.standard_cost}}</div>
+                  <div>{{b.overall_cost}}</div>
+                </li>
+                <!-- <li>
+                  <div><a routerLink="/budget-assumtion" matTooltip="Know Your Assumptions" matTooltipPosition="right">Transition strips / nosings</a></div>
+                  <div>3 pieces</div>
+                  <div>$75.00 Each</div>
+                  <div>$225.00</div>
+                </li>
+                <li>
+                  <div><a routerLink="/budget-assumtion" matTooltip="Know Your Assumptions" matTooltipPosition="right">Estimated delivery cost</a></div>
+                  <div></div>
+                  <div></div>
+                  <div>$90</div>
+                </li> -->
+                <li class="for-two-child">
+                  <div>Total Material Cost</div>
+                  <div>${{totalMaterialCost}}</div>
+                </li> 
+              </ul>
+            </div>
+            <div class="flooring-budget-holder">
+              <h5 class="relative">Installation Budget:<mat-spinner class="loader-controller" [mode]="mode"></mat-spinner></h5>
+              <ul class="budget-part">
+                <li *ngFor="let b of budgetIntArr">
+                  <div><button (click)="openDialog()" matTooltip="Know Your Assumptions" matTooltipPosition="right">{{b.field_name}}</button></div>
+                  <div>{{b.value}}</div>
+                  <div>{{b.standard_cost}}</div>
+                  <div>{{b.overall_cost}}</div>
+                </li>
+                <!-- <li>
+                  <div><a routerLink="/budget-assumtion" matTooltip="Know Your Assumptions" matTooltipPosition="right">Floor install</a></div>
+                  <div>197 sf</div>
+                  <div>$3.50 per sf</div>
+                  <div>$685.5</div>
+                </li>
+                <li>
+                  <div><a routerLink="/budget-assumtion" matTooltip="Know Your Assumptions" matTooltipPosition="right">Base Boards</a></div>
+                  <div>44.5 LF</div>
+                  <div>$3.00 pe LF</div>
+                  <div>$133.5</div>
+                </li> -->
+                <li class="for-two-child">
+                  <div>Total Installation Cost</div>
+                  <div>${{totalInstallationCost}}</div>
+                </li>
+              </ul>
+            </div>
+            <div class="budget-total-holder">
+              <div>Total Budget</div>
+              <div>${{totalOverallCost}}</div>
+            </div>
+            <div class="mt-1 budget-total-holder">
+              <div>Average</div>
+              <div>${{totalAvgCost}}</div>
+            </div>
+            <div class="nxt-prev-btn-holder mt-4 mb-4">
+              <a routerLink="/yourroom" (click)="roomData()" mat-button class="prev-btn">Previous</a>
+              <!-- <a routerLink="/signup" (click)="loginCheck(1)" mat-button class="next-btn" *ngIf="!signUpValue">Save Project</a>
+              <a routerLink="/my-account" mat-button class="next-btn" *ngIf="signUpValue">Save Project</a> -->
+              <button type="button" (click)="openEditNameModalDialog()" mat-button class="next-btn">Save Project</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

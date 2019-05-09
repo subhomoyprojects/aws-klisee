@@ -1,0 +1,76 @@
+<header class="header-login-signup-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark navigation-holder">
+      <a class="navbar-brand" routerLink="/home"><img src="/assets/images/white-logo.png" alt="KLISEE"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse empowering-home-text-controller" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item separater">
+            <a class="nav-link" routerLink="/login">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</header>
+  
+  <main class="login-signup-main-wrapper">
+    <section class="login-signup-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 heading-tag">
+              <h1>Login your <strong>Account</strong><span>Come join the Klisee, Let's setup your account. Don't have an account <a routerLink="/signup">sign up here.</a> </span></h1>
+          </div>
+        </div>
+        <div class="signup-login-holder">
+          <div class="row">
+            <div class="col-12 login-signup-form-controller offwhite-bg">
+                <span *ngIf="a, else blockwise"><p class="text-center mb-2 pt-0 alert alertlogin" style="color:#c94141;">{{message}}</p></span>
+                <ng-template #blockwise><p class="text-center mb-2 pt-0 alert alertlogin" style="color:#2d9244;">{{message}}</p></ng-template>
+                <!-- <p class="alertlogin">{{message}}</p> -->
+              <form id="myLoginFrm" class="login_form" [formGroup]="myLoginFrm">
+                <ul>
+                  <li>
+                    <mat-form-field>
+                      <!-- <input matInput placeholder="Email" required> -->
+                      <input matInput  type="text" placeholder="Email" id="email_login" class="login" formControlName="email">
+                      <mat-error *ngIf = "this.myLoginFrm.controls.email.status!=='VALID' && show">Enter a Valid Email</mat-error>
+                    </mat-form-field>
+                  </li>
+                  <li>
+                    <mat-form-field>
+                      <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" id="password_login" class="login" formControlName="password">
+                      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      <mat-error *ngIf = "this.myLoginFrm.controls.password.status!=='VALID' && show">Minimum 6 digits are Required</mat-error>
+                    </mat-form-field>
+                  </li>
+                  <li class="text-center forgot-password">
+                    <a routerLink="/forget-password">Forgot your password?</a>
+                  </li>
+                  <li class="text-center">
+                    <button mat-raised-button class="submit-btn" (click)='loginFormSubmit()' [disabled]="!myLoginFrm.valid">Submit</button>
+                  </li>
+                </ul>
+                <!--<div class="or-saparater">
+                  <p>Or</p>
+                </div>
+                 <ul class="social-btn-holder">
+                  <li>
+                    <a mat-raised-button class="facebook-btn"><i class="fa fa-facebook"></i>Login with Facebook</a>
+                  </li>
+                  <li>
+                      <a mat-raised-button class="google-plus-btn"><i class="fa fa-google-plus"></i>Login with Google</a>
+                  </li>
+                </ul> -->
+              </form>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+  </main>

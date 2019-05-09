@@ -1,0 +1,58 @@
+<app-header></app-header>
+<main class="body-wrapper">
+  <app-service-heading></app-service-heading>
+  <section class="common-controller-question-answer yourroom-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="room-details-holder metarial-cost heading-tag">
+            <h2>We will calculate your material budget</h2>
+            <p>If you know the exact product you are interested in you can provide the name, SKU, case pack and price per square foot. If not, we will default to a standard price for budgeting purposes</p>
+            <form id="materialCost" method="POST" [formGroup]="materialCost">
+              <div class="room-details metarial-cost-details mt-5">
+                <div class="full-width">
+                  <div class="half-width">
+                    <mat-form-field>
+                      <input matInput  class="room_choose" placeholder="Manufacturer" formControlName="manuFacturer" >
+                      <mat-error *ngIf = "this.materialCost.controls.manuFacturer.status!=='VALID' && show">Name is Required</mat-error>
+                    </mat-form-field>
+                  </div>
+                  <div class="half-width">
+                    <mat-form-field>
+                      <input matInput placeholder="Case Pack Size" class="room_choose" formControlName="casePackSize" >
+                      <mat-error *ngIf = "this.materialCost.controls.casePackSize.status!=='VALID' && show">Only Numeric value is allowed</mat-error>
+                      <span matSuffix>Sf / Case</span>
+                    </mat-form-field>
+                  </div>
+                  
+                </div>
+                <div class="full-width">
+                  <div class="half-width">
+                    <mat-form-field>
+                      <input matInput  class="room_choose" placeholder="SKU" formControlName="sku" >
+                    </mat-form-field>
+                  </div>
+                  <div class="half-width">
+                    <mat-form-field>
+                      <input matInput placeholder="Price" class="room_choose" formControlName="pricePerSquerFeet" >
+                      <mat-error *ngIf = "this.materialCost.controls.pricePerSquerFeet.status!=='VALID' && show">Only Numeric value is allowed</mat-error>
+                      <span matSuffix>Per / Sf</span>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="nxt-prev-btn-holder mt-4 mb-4">
+                  <a routerLink="/location" mat-button class="prev-btn">Previous</a>
+                  <a routerLink="/materialcost" mat-button *ngIf="!materialCost.valid" class="next-btn" (click)="materialCostSubmit()">Next</a>
+                  <a routerLink="/yourroom" mat-button *ngIf="materialCost.valid" class="next-btn" (click)="materialCostSubmit()">Next</a>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="add-another-room color-yellow size-14"  routerLink="/standard-material-cost">View Standard price table</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

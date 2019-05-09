@@ -1,0 +1,46 @@
+<app-header></app-header>
+<main class="body-wrapper">
+  <section class="main-heading-wrapper">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 heading-tag collect-pin">
+            <!-- Let's get started creating your -->
+            <h1> <strong>Cabinets Remodel Budget!</strong><span>Please help Klisee with the following details in order to create the most accurate budget:</span></h1>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="common-controller-question-answer state-pin-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <figure class="question-answer-holder">
+            <div class="question-answer-title-holder">
+              <h2>Please select your cabinet price point</h2>
+              <div class="question-answer-icon-holder">
+                <img src="assets/images/engineer.png" alt="Worker">
+              </div>
+            </div>
+            <figcaption>
+              <form class="question-answer-form">
+                <mat-radio-group>
+                  <ul>
+                    <li><mat-radio-button value="Contractor Grade Stock">Contractor Grade Stock</mat-radio-button></li>
+                    <li><mat-radio-button value="Designer Stock">Designer Stock</mat-radio-button></li>
+                    <li><mat-radio-button value="Entry Level Semi Custom">Entry Level Semi Custom</mat-radio-button></li>
+                    <li><mat-radio-button value="High End Semi Custom">High End Semi Custom</mat-radio-button></li>
+                    <li><mat-radio-button value="Inset / Custom">Inset / Custom</mat-radio-button></li>
+                    <li><mat-radio-button value="Not sure">Not sure</mat-radio-button></li>
+                  </ul>
+                </mat-radio-group>
+                <div class="nxt-prev-btn-holder">
+                  <a routerLink="/cabinets-location" mat-button class="next-btn">Next</a>
+                </div>
+              </form>              
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

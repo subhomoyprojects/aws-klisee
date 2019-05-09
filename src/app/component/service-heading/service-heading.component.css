@@ -1,0 +1,27 @@
+.heading-tag h1{
+    color: #446277;
+    font-size: 36px;
+    text-align: center;
+    font-family: Helvetica;
+    line-height: 40px;
+    margin: 2rem 0 1.5rem;
+}
+.heading-tag h1 span{
+    display: block;
+    font-size: 18px;
+}
+/* Media Query */
+
+@media (min-width:320px) and (max-width:767px){
+    .heading-tag h1 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .heading-tag h1 span {
+        font-size: 13px;
+        line-height: 15px;
+        margin-top: 10px;
+    }
+}
+
+/* Media Query */

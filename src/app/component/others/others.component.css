@@ -1,0 +1,129 @@
+.body-wrapper{
+    background: linear-gradient(0deg,rgba(228,228,232,0.5),rgba(228,228,232,0.5)), url(/assets/images/bg.jpg) no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 70px);
+    background-attachment: fixed;
+}
+.heading-tag h1{
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Helvetica';
+    color: #446277;
+    text-align: center;
+}
+.heading-tag h1 span{
+    display: block;
+    font-size: 28px;
+    font-weight: normal;
+}
+.other-service-holder{
+    background:linear-gradient(0deg,rgba(68,98,119,0.5) 2%,rgba(255,255,255,0.3)98%);
+    padding: 40px;
+    width: 98%;
+    max-width: 800px;
+    margin: 6% auto 20px;
+    max-height: 432px;
+    min-height: 430px;
+    box-shadow: 0 6px 100px rgb(213, 213, 213);
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid rgba(68,98,119,0.27);
+    position: relative;
+}
+.other-service-button-holder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.other-service-button-holder li {
+    width: 30%;
+    margin: 8px;
+}
+.other-service-button-holder li a{
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    line-height: 52px;
+    font-size: 17px;
+    color: #446277;
+    border-radius: 6px;
+    box-shadow: 5px 0 27px rgba(68,98,119,0.16);
+    transition: all ease-in-out 0.3s;
+    text-transform: capitalize;
+}
+.other-service-button-holder li a.active,
+.other-service-button-holder li a:hover,
+.other-service-button-holder li a:active{
+    background-color: #446277;
+    color: #fff;
+}
+.other-service-default-button-holder{
+    display: flex;
+}
+.other-service-default-button-holder button{
+    display: inline-block;
+    line-height: 34px;
+}
+.get-started-btn {
+    background-color: #e0bf66;
+    color: #12222f;
+    text-transform: capitalize;
+    font-size: 15px;
+    text-align: center;
+    display: table;
+    margin: 0 5px;
+    padding: 2px 15px;
+    transition: all ease-in-out 0.3s;
+}
+.get-started-btn:hover, 
+.get-started-btn:active, 
+.get-started-btn:focus {
+    text-decoration: none;
+    background-color: #a78c43;
+}
+.other-service-default-button-holder{
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    background-color: rgba(24,55,76,0.70);
+    padding: 20px 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media(min-width:320px) and (max-width:767px){
+    .other-service-holder{
+        padding: 15px 15px 80px;
+        max-height: none;
+    }
+    .heading-tag h1{
+        font-size: 22px;
+    }
+    .heading-tag h1 span{
+        font-size: 16px;
+    }
+    .other-service-button-holder li {
+        width: 43%;
+    }
+    .other-service-button-holder li a {
+        line-height: normal;
+        font-size: 13px;
+        white-space: normal;
+        padding: 14px;
+    }
+}
+@media(min-width:600px) and (max-width:767px){
+    .other-service-button-holder li {
+        width: 30%;
+    }
+}
+@media(min-width:768px) and (max-width:991px){
+    .heading-tag h1{
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,50 @@
+<app-header></app-header>
+<main class="body-wrapper">
+  <section class="main-heading-wrapper">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 heading-tag collect-pin">
+            <!-- Let's get started creating your -->
+            <h1> <strong>Cabinets Remodel Budget!</strong><span>Please help Klisee with the following details in order to create the most accurate budget:</span></h1>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="budget-calculation-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="budget-calculation-holder">
+            <h2 class="text-center">Common Kitchen Layouts</h2>
+            <form>
+                <mat-button-toggle-group>
+                <ul class="kitchen-layout-holder">
+                  <li>
+                    <mat-button-toggle value="image1"><img src="assets/images/plan.png" alt="Plan 1"></mat-button-toggle>
+                    <h5>L with Island</h5>
+                  </li>
+                  <li>
+                    <mat-button-toggle value="image2"><img src="assets/images/plan1.png" alt="Plan 2"></mat-button-toggle>
+                    <h5>Galley Style</h5>
+                  </li>
+                  <li>
+                    <mat-button-toggle value="image3"><img src="assets/images/plan2.png" alt="Image 3"></mat-button-toggle>
+                    <h5>L with Peninsula</h5>
+                  </li>
+                  <li>
+                    <mat-button-toggle value="image4"><img src="assets/images/plan3.png" alt="Image 4"></mat-button-toggle>
+                    <h5>Large Custom</h5>
+                  </li>
+                </ul>
+              </mat-button-toggle-group>
+            </form>
+            <div class="nxt-prev-btn-holder mt-4 mb-4">
+              <a routerLink="/cabinets-location" mat-button class="prev-btn">Previous</a>
+              <a routerLink="/cabinets-floor-plan" mat-button class="next-btn">Next</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

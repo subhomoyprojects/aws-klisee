@@ -1,0 +1,388 @@
+.header-login-signup-wrapper{
+    background-color: #18374c;
+}
+.header-login-signup-wrapper nav{
+    max-width:85%;
+    margin: 0 auto;
+    padding: 0;
+}
+.header-login-signup-wrapper .navbar-brand{
+    padding: 0;
+}
+.header-login-signup-wrapper .navbar-brand img{
+    width:120px;
+}
+.separater{
+    position: relative;
+}
+.separater::after{
+    content: "|";
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    margin-top: -13px;
+    font-size: 20px;
+    color: #e0bf66;
+}
+.navbar-nav li a{
+    padding: 5px 15px;
+    font-size: 17px;
+    color: #e0bf66;
+}
+/*------*/
+.login-signup-main-wrapper{
+    min-height: 100vh;
+    background:#e4e8e8 url(/assets/images/banner-login.png) no-repeat;
+    background-size: cover;
+}
+.login-signup-wrapper{
+    padding: 40px 0;
+}
+.heading-tag h1{
+    color: #18374c;
+    font-size: 36px;
+    text-align: center;
+    font-family: Helvetica;
+    line-height: 40px;
+    margin: 0.5rem 0 1.2rem;
+}
+.heading-tag h1 span{
+    display: block;
+    font-size: 18px;
+}
+.heading-tag h1 span a:hover{
+    text-decoration: underline;
+}
+.my-account-holder{
+    background-color:rgba(255,255,255,0.7);
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 6px 100px rgb(213, 213, 213);
+    padding: 20px;
+    border-radius: 10px;
+}
+.my-account-controller h5{
+    color: #18374c;
+    font-size: 20px;
+    line-height: 28px;
+}
+.word-break{
+    display: block;
+}
+.social-btn-holder{
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 0;
+}
+.social-btn-holder li{
+    margin:10px 10px 20px;
+    text-align: center;
+}
+.saparater{
+    border-right: 2px solid #e0e0e0;
+}
+.terms-service-controller{
+    font-size: 11px;
+    text-align: center;
+}
+.terms-service-controller a:hover{
+    text-decoration: underline;
+}
+.or-saparater{
+    text-align: center;
+}
+.or-saparater p{
+    color: #18374c;
+    position: relative;
+    width:120px;
+    margin: 10px auto;
+}
+.or-saparater p::before,
+.or-saparater p::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    height: 2px;
+    background-color: #18374c;
+    width:100px;
+}
+.or-saparater p::before{
+    left: -60%;
+}
+.or-saparater p::after{
+    right: -60%;
+}
+.my-account-controller .mat-icon{
+    color: #ababab;
+}
+.user-heading-controller{
+    display: flex;
+    align-items: center;
+}
+.user-heading-controller > div{
+    width: 50%;
+}
+.user-heading-controller > div:last-child{
+    text-align: right;
+}
+.get-new-budget-btn{
+    width:auto !important;
+    padding: 0 20px;
+    line-height: 38px;
+    margin-top: 0 !important;
+}
+.user-heading-controller h5{
+    margin-bottom: 0;
+}
+.my-account-controller h6{
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.recent-projects-holder{
+    margin-top: 2rem;
+}
+.project-name-holder{
+    display: flex;
+    align-items: center;
+}
+.project-name-holder h4{
+    font-size: 18px;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 205px;
+    position: relative;
+    padding-left: 40px;
+    line-height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: capitalize;
+}
+.project-name-holder h4 small{
+    display: block;
+    color: #727272;
+    font-family: arial;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 12px;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+.project-name-holder h4 > img{
+    position: absolute;
+    width:30px;
+    left: 0;
+}
+.project-name-holder .devider{
+    margin: 0 20px;
+    width: 1px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #b9b5b1;
+}
+.price{
+    color: #8c8c8c;
+}
+
+.recent-project-item-holder li{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    margin-top: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.1);
+}
+/* .recent-project-item-holder li > div{
+    width:50%;
+} */
+.recent-project-item-holder li > div:first-child{
+    flex-grow: 8;
+}
+.recent-project-item-holder li > div:last-child{
+    flex-grow: 2;
+}
+.project-action-holder{
+    text-align: right;
+}
+.project-action-holder button:not(:last-child){
+    margin-right: 5px;
+}
+.project-action-holder button:first-child{
+    color: #46266e;
+}
+.project-action-holder button:last-child{
+    color: #f44336;
+}
+
+/*--- Media Start ----*/
+@media (min-width:320px) and (max-width:991px){
+    .separater::after{
+        display: none;
+    }
+    .navbar-light .navbar-toggler{
+        border-color: #ddbf65;
+    }
+}
+@media (min-width:320px) and (max-width:767px){
+    .social-btn-holder li a .fa {
+        margin-right: 5px;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 20px;
+    }
+    .social-btn-holder li a{
+        width: 230px;
+        height: 38px;
+    }
+    .social-btn-holder{
+        display: flex;
+        flex-direction: column;
+    }
+    .social-btn-holder li{
+        margin: 5px;
+    }
+    .my-account-controller{
+        padding: 15px;
+    }
+    .heading-tag h1 span {
+        display: block;
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .heading-tag h1 {
+        font-size: 26px;
+    }
+    .login-signup-wrapper {
+        padding: 20px 0;
+    }
+}
+@media (min-width:320px) and (max-width:600px){
+    .user-heading-controller {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .user-heading-controller > div {
+        width: 100%;
+        text-align: center !important;
+        margin: 5px 0;
+    }
+    .recent-project-item-holder li{
+        flex-direction: column;
+    }
+    .recent-project-item-holder li > div {
+        width: 100%;
+    }
+    .project-name-holder {
+        flex-direction: column;
+    }
+    .project-name-holder .devider{
+        display: none;
+    }
+    .project-name-holder h4 {
+        margin-bottom: 10px;
+    }
+    .price {
+        font-size: 14px;
+    }
+    .project-action-holder {
+        text-align: center;
+    }
+}
+@media (min-width:601px) and (max-width:991px){
+    .recent-project-item-holder li > div:first-child {
+        width: 85%;
+    }
+    .recent-project-item-holder li > div:last-child {
+        width: 15%;
+    }
+    .price {
+        font-size: 14px;
+    }
+}
+/* ======================== For Assumation ============================= */
+
+.budget-calculation-holder{
+    border: 1px solid rgba(68,98,119,0.27);
+    border-radius: 4px;
+    background: linear-gradient(0deg,rgba(255,255,255,0.85)30%,rgba(255,255,255,0.50)70%);
+    padding: 30px;
+    width: 98%;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    min-height: 400px;
+}
+.assumption-controller h3{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #446277;
+    margin-top: 10px;
+}
+
+.back-to-page{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 16px;
+    width:30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #446277;
+    box-shadow: 0 0 0 0 rgba(68, 98, 119, 0.4);
+}
+.back-to-page:hover{
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(68, 98, 119, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(68, 98, 119, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(68, 98, 119, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 10px rgba(68, 98, 119, 0);}}
+
+.assumptions-modal .assumption-controller{
+    margin: 0;
+    width: 100%;
+    border: none;
+    background: none;
+    min-height: 200px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.assumptions-modal .back-to-page{
+    padding: 0;
+    top: 10px;
+    right: 10px;
+    left: auto;
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+.edit-name-controller h3{
+    font-size: 20px;
+}
+.button-holder{
+    display: flex;
+    justify-content: center;
+}
+
+/* Media Query */
+@media(min-width:320px) and (max-width:767px){
+    .budget-calculation-holder {
+        padding: 30px 5px;
+    }
+    .assumption-controller h3 {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
+/* Media Query */

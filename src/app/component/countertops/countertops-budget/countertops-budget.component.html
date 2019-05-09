@@ -1,0 +1,84 @@
+<app-header></app-header>
+<main class="body-wrapper">
+  <section class="main-heading-wrapper">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 heading-tag collect-pin">
+            <h1><strong>Countertops Remodel Budget!</strong><span>Please help Klisee with the following details in order to create the most accurate budget</span></h1>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="budget-calculation-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="budget-calculation-holder">
+            <h2 class="text-center">Here is your <strong class="text-capitalize">Countertops Remodel</strong> Budget </h2>
+            <div class="flooring-budget-holder">
+              <h5>Materials Budget:</h5>
+              <ul class="budget-part">
+                <li *ngFor= "let b of budgetMatArr">
+                  <div><button class="text-left" (click)="openDialog()" matTooltip="Know Your Assumptions" matTooltipPosition="right">{{b.field_name}}</button></div>
+                  <div>{{b.value}}</div>
+                  <div>{{b.standard_cost}}</div>
+                  <div>{{b.overall_cost}}</div>
+                </li>
+                <!-- <li>
+                  <div><button (click)="openDialog()" matTooltip="Know Your Assumptions" matTooltipPosition="right">Sink Budget</button></div>
+                  <div></div>
+                  <div></div>
+                  <div>$300.00</div>
+                </li> -->
+                <li class="for-two-child">
+                  <div>Total Material Cost</div>
+                  <div>${{totalMaterialCost}}</div>
+                </li>
+              </ul>
+            </div>
+            <div class="flooring-budget-holder">
+              <h5>Installation Budget:</h5>
+              <ul class="budget-part">
+                <li *ngFor="let b of budgetIntArr">
+                  <div><button (click)="openDialog()" matTooltip="Know Your Assumptions" matTooltipPosition="right">{{b.field_name}}</button></div>
+                  <div>{{b.value}}</div>
+                  <div>{{b.standard_cost}}</div>
+                  <div>{{b.overall_cost}}</div>
+                </li>
+                <!-- <li class="for-two-child">
+                  <div><button (click)="openDialog()" matTooltip="Know Your Assumptions" matTooltipPosition="right">Sink  Cutout</button></div>
+                  <div>$250.00</div>
+                </li> -->
+                <!-- <li class="for-two-child">
+                  <div><button (click)="openDialog()" matTooltip="Know Your Assumptions" matTooltipPosition="right">Removal & Disposal of Original Countertops</button></div>
+                  <div>$200.00</div>
+                </li>
+                <li class="for-two-child">
+                  <div><button (click)="openDialog()" matTooltip="Know Your Assumptions" matTooltipPosition="right">Plumber to reconnect</button></div>
+                  <div>$650.00</div>
+                </li>
+                <li class="for-two-child"> -->
+                <li class="for-two-child">
+                  <div>Total Installation Cost</div>
+                  <div>${{totalInstallationCost}}</div>
+                </li>
+              </ul>
+            </div>
+            <div class="budget-total-holder">
+              <div>Total Budget</div>
+              <div>${{totalOverallCost}}</div>
+            </div>
+            <!-- <div class="mt-1 budget-total-holder">
+              <div>Average</div>
+              <div>${{totalAvgCost}}</div>
+            </div> -->
+            <div class="nxt-prev-btn-holder mt-4 mb-4">
+              <a mat-button class="prev-btn" (click)="budgetSubmit()">Previous</a>
+              <button type="button" mat-button class="next-btn" (click)="openCountertopEditNameModalDialog()">Save Project</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

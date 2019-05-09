@@ -1,0 +1,35 @@
+.header-wrapper{
+    background-color: #e0bf66;
+}
+.header-wrapper nav{
+    max-width:85%;
+    margin: 0 auto;
+    padding: 0;
+}
+.header-wrapper .navbar-brand{
+    padding: 0;
+}
+.header-wrapper .navbar-brand img{
+    width:120px;
+}
+.separater{
+    position: relative;
+}
+.separater::after{
+    content: "|";
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    margin-top: -13px;
+    font-size: 20px;
+}
+.navbar-nav li a{
+    padding: 5px 15px;
+    font-size: 17px;
+    color: #18374c;
+}
+@media (min-width:320px) and (max-width:991px){
+    .separater::after{
+        display: none;
+    }
+}

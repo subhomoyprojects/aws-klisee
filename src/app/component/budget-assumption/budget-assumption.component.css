@@ -1,0 +1,103 @@
+.body-wrapper{
+    background: linear-gradient(0deg,rgba(228,228,232,0.5),rgba(228,228,232,0.5)), url(/assets/images/bg.jpg) no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 70px);
+    background-attachment: fixed;
+}
+.budget-calculation-holder{
+    border: 1px solid rgba(68,98,119,0.27);
+    border-radius: 4px;
+    background: linear-gradient(0deg,rgba(255,255,255,0.85)30%,rgba(255,255,255,0.50)70%);
+    padding: 30px;
+    width: 98%;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    min-height: 400px;
+}
+.assumption-controller h3{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #446277;
+}
+.assumption-holder{
+    margin-top: 30px;
+}
+.assumption-holder li{
+    font-size: 17px;
+    margin-bottom: 15px;
+    display: flex;
+    color: #446277;
+}
+.assumption-holder li span{
+    display: inline-block;
+    padding:0 15px;
+    position: relative;
+    width: 100%;
+}
+.assumption-holder li span:first-child{
+    width:80%;
+}
+.assumption-holder li span:last-child{
+    width:20%;
+}
+.assumption-holder li span:first-child::after{
+    content: ":";
+    position: absolute;
+    right: 15px;
+}
+.assumption-holder li:last-child span{
+    font-weight: bold;
+}
+.assumption-holder li:last-child{
+    border-top: 1px solid #446277;
+    border-bottom: 1px solid #446277;
+    padding: 7px 0;
+}
+.back-to-page{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 16px;
+    width:30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #446277;
+    box-shadow: 0 0 0 0 rgba(68, 98, 119, 0.4);
+}
+.back-to-page:hover{
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(68, 98, 119, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(68, 98, 119, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(68, 98, 119, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 10px rgba(68, 98, 119, 0);}}
+
+/* Media Query */
+@media(min-width:320px) and (max-width:767px){
+    .budget-calculation-holder {
+        padding: 30px 5px;
+    }
+    .assumption-controller h3 {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .assumption-holder li {
+        font-size: 12px;
+    }
+    .assumption-holder li span:first-child{
+        width:65%;
+    }
+    .assumption-holder li span:last-child{
+        width:45%;
+    }
+    .assumption-holder li span:first-child::after {
+        right: auto;
+    }
+}
+/* Media Query */

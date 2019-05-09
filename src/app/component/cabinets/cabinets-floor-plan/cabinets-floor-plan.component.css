@@ -1,0 +1,85 @@
+.body-wrapper{
+    background: linear-gradient(0deg,rgba(228,228,232,0.5),rgba(228,228,232,0.5)), url(/assets/images/bg.jpg) no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 70px);
+    background-attachment: fixed;
+}
+/* For Heading */
+.heading-tag h1{
+    color: #446277;
+    font-size: 36px;
+    text-align: center;
+    font-family: Helvetica;
+    line-height: 40px;
+    margin: 2rem 0 1.5rem;
+}
+.heading-tag h1 span{
+    display: block;
+    font-size: 18px;
+}
+/* Media Query */
+
+@media (min-width:320px) and (max-width:767px){
+    .heading-tag h1 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .heading-tag h1 span {
+        font-size: 13px;
+        line-height: 15px;
+        margin-top: 10px;
+    }
+}
+
+/* Media Query */
+/* For Heading */
+.budget-calculation-holder{
+    border: 1px solid rgba(68,98,119,0.27);
+    border-radius: 4px;
+    background: linear-gradient(0deg,rgba(255,255,255,0.85)30%,rgba(255,255,255,0.50)70%);
+    padding: 30px;
+    width: 98%;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    min-height: 400px;
+}
+.budget-calculation-holder a:not(.back-to-page), .budget-calculation-holder button:not(.back-to-page){
+    color: #446277;
+}
+.budget-calculation-holder button{
+    padding: 0;
+}
+.budget-calculation-holder h2{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #18374c;
+}
+.plan-size-input-holder{
+    margin-bottom: 20px;
+}
+.add-another-room {
+    color: #18374c;
+    text-decoration: underline;
+    border: none;
+    font-size: 12px;
+    padding: 0;
+}
+
+/*---------------*/
+@media (min-width:320px) and (max-width:767px){
+    .budget-calculation-holder {
+        padding: 10px;
+        width: 100%;
+        max-width: 800px;
+    }
+    .budget-calculation-holder h2 {
+        font-size: 20px;
+    }
+    .nxt-prev-btn-holder .next-btn, .nxt-prev-btn-holder .prev-btn {
+        padding: 1px 10px;
+        font-size: 15px;
+        min-width: 120px;
+        margin: 0 10px;
+    }
+}

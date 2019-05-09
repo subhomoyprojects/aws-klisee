@@ -1,0 +1,52 @@
+<app-header></app-header>
+<main class="body-wrapper">
+ <section class="other-service-wrapper">
+   <div class="container">
+     <div class="row">
+       <div class="col-12 other-service-controller heading-tag">
+         <div class="other-service-holder">
+           <h1>Please select a project from the following list</h1>
+           <ul class="other-service-button-holder">
+                  <li *ngFor="let s of service_name; let i = index">
+                    <!-- <span   *ngIf= "routingPath(i); else elseBlock"> -->
+                    <a *ngIf="i==0" (click)="routingPath(i)" routerLink="/flooring" mat-raised-button >{{service_name[i]}}</a>
+                    <a *ngIf="i==1" (click)="routingPath(i)" routerLink="/others" mat-raised-button >{{service_name[i]}}</a>
+                    <a *ngIf="i==2" (click)="routingPath(i)" routerLink="/countertop" mat-raised-button >{{service_name[i]}}</a>
+                    <a *ngIf="i==3" (click)="routingPath(i)" routerLink="/others" mat-raised-button >{{service_name[i]}}</a>
+                    <a *ngIf="i==4" (click)="routingPath(i)" routerLink="/others" mat-raised-button >{{service_name[i]}}</a>
+                    <a *ngIf="i==5" (click)="routingPath(i)" routerLink="/others" mat-raised-button >{{service_name[i]}}</a>
+                    <a *ngIf="i==6" (click)="routingPath(i)" routerLink="/others" mat-raised-button >{{service_name[i]}}</a>
+                    <a *ngIf="i==7" (click)="routingPath(i)" routerLink="/others" mat-raised-button >{{service_name[i]}}</a>
+                    <a *ngIf="i==8" (click)="routingPath(i)" routerLink="/others" mat-raised-button >{{service_name[i]}}</a>
+                    <!-- <a *ngIf="i==7" routerLink="/others" mat-raised-button >{{service_name[i]}}</a> -->
+                    <!-- <a (click)="routingPath(2)" routerLink="/countertop" mat-raised-button >{{service_name[i]}}</a> -->
+                    <!-- <span   *ngIf= "Path(i)"></span>
+                    <a (click)="Path(i)" routerLink="/countertop" mat-raised-button >{{service_name[i]}}</a>
+                    </span> -->
+                  <!-- <ng-template #elseBlock><span><a mat-raised-button>{{service_name[i]}}</a> -->
+                  <!-- </span> -->
+                <!-- </ng-template> -->
+                  </li>
+              <!-- <li><a routerLink="{{linkArr[i]}}" mat-raised-button >{{s}}</a></li> -->
+             <!-- <li><a routerLink="/flooring" mat-raised-button >{{s}}</a></li>
+             <li><a routerLink="/flooring" mat-raised-button >{{s}}</a></li>
+             <li><a routerLink="/flooring" mat-raised-button >{{s}}</a></li> --> 
+             <!-- <li><a routerLink="#" mat-raised-button>Roofing</a></li>
+             <li><a routerLink="#" mat-raised-button>Painting</a></li>
+             <li><a routerLink="#" mat-raised-button>Applience installation</a></li>
+             <li><a routerLink="#" mat-raised-button>Countertops</a></li>
+             <li><a routerLink="#" mat-raised-button>Cabinets</a></li>
+             <li><a routerLink="#" mat-raised-button>Plumbing</a></li>
+             <li><a routerLink="#" mat-raised-button>Carpentry </a></li>
+             <li><a routerLink="#" mat-raised-button>Floooring</a></li> -->
+           </ul>
+           <div class="other-service-default-button-holder">
+            <a routerLink="" class="get-started-btn" mat-button>Kitchen Remodel</a>
+            <a routerLink="" class="get-started-btn" mat-button>Bath Remodel</a>
+          </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+</main>

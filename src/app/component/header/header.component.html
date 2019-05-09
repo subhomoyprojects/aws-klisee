@@ -1,0 +1,21 @@
+<header class="header-wrapper">
+  <nav class="navbar navbar-expand-lg navbar-light navigation-holder">
+    <a class="navbar-brand" routerLink="/home"><img src="/assets/images/logo.png" alt="KLISEE"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse empowering-home-text-controller" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item separater">
+          <a class="nav-link" routerLink="/login"  *ngIf="!isloggedIn">Log In</a>
+          <a class="nav-link" routerLink="/login" *ngIf="isloggedIn" (click)="LogOut()">Log Out</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup" *ngIf="!isloggedIn">Sign Up</a>
+          <a class="nav-link" routerLink="/my-account" *ngIf="isloggedIn">My Account</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
